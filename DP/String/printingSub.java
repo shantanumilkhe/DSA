@@ -43,12 +43,12 @@ public class printingSub {
                 j--;
             }
         }
-        System.out.println(ans);
+
         String fans = "";
         for(int o=ans.length()-1; o>=0;o--){
             fans = fans+ans.charAt(o);
         }
-        System.out.println(fans);
+       
     }
     public static void main(String[] args) {
         long startTime = System.nanoTime();
