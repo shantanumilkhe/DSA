@@ -39,7 +39,7 @@ import java.util.ArrayList;
 
 //        Keep repeating these steps, for every node that you find unvisited, and visit the entire province.
 
-//        Add a counter variable to count the number of times the DFS function is called, as in 
+//        Add a counter variable to count the number of times the DFS function is called, as in
 //        this way we can count the total number of starting nodes, which will give us the number
 //        of provinces.
 public class Provinces {
