@@ -6,16 +6,12 @@ import java.util.Queue;
 class Pair {
     int first;
     int second;
-
     public Pair(int first, int second) {
         this.first = first;
         this.second = second;
     }
 }
-
-
 public class NoOfIslands {
-
     private static void bfs(int rows, int columns, int[][] graph, boolean[][] visited){
 
         Queue<Pair> q = new LinkedList<Pair>();
