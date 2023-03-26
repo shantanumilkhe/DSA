@@ -50,7 +50,6 @@ public class DFS {
 
         ArrayList<Integer> list = new ArrayList<>();
         boolean visited[] = new boolean[V];
-        Stack<Integer> stack = new Stack<>();
 
         visited[0] = true;
         recDFS(0, visited, Graph, list);
