@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
+
+// here we have modified the BFS algorithm, instead of visited array, we are using a
+// indegree array, The indegree of a node is the number of directed edges incoming towards it.
+// initally add, those values in the queue whose indegree is 0
+// the use the while loop and add the every polled item to the ans.
+// reduce the indegree of the adj nodes of the polled node.
+// if the indegree is zero. add them to the queue.
+
 public class Kahns_Algo {
 
     public static void kahn(int V,  ArrayList<ArrayList<Integer>> adj){
