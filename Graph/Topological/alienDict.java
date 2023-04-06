@@ -1,18 +1,8 @@
 package Graph.Topological;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
-
-// here we have modified the BFS algorithm, instead of visited array, we are using a
-// indegree array, The indegree of a node is the number of directed edges incoming towards it.
-// initally add, those values in the queue whose indegree is 0
-// the use the while loop and add the every polled item to the ans.
-// reduce the indegree of the adj nodes of the polled node.
-// if the indegree is zero. add them to the queue.
-
-public class Kahns_Algo {
+public class alienDict {
 
     public static void kahn(int V,  ArrayList<ArrayList<Integer>> adj){
         int[] inDegree = new int[V];
@@ -45,25 +35,41 @@ public class Kahns_Algo {
         }
 
         for(int a: sort){
-            System.out.println(a+ " ");
+            char ans = (char) (a + 'a');
+            System.out.println(ans+ " ");
         }
+    }
+
+    public static void alien(int n, int k, String[] dict){
+
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+        for(int i =0; i<k; i++){
+            adj.add(new ArrayList<>());
+        }
+
+        for(int i = 1; i<dict.length; i++){
+            String s1 = dict[i-1];
+            String s2 = dict[i];
+            int len = Math.min(s1.length(), s2.length());
+            for(int j =0; j<len; j++){
+                if(s1.charAt(j)!=s2.charAt(j)){
+                    adj.get(s1.charAt(j)-'a').add(s2.charAt(j)-'a');
+                    break;
+                }
+            }
+        }
+
+        kahn(k, adj);
     }
     public static void main(String[] args) {
         long startTime = System.nanoTime();
 
-        int V = 6;
-        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-        for (int i = 0; i < V; i++) {
-            adj.add(new ArrayList<>());
-        }
-        adj.get(2).add(3);
-        adj.get(3).add(1);
-        adj.get(4).add(0);
-        adj.get(4).add(1);
-        adj.get(5).add(0);
-        adj.get(5).add(2);
 
-        kahn(V, adj);
+        String[] dict = {"baa", "abcd", "abca", "cab", "cad"};
+        int n = dict.length;
+        int k = 4;
+
+        alien(n, k ,dict);
 
         long endTime = System.nanoTime();
         long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds.
