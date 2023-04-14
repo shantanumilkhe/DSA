@@ -91,7 +91,7 @@ public class longestCommonSub {
 
 
         System.out.println(longest(s1.length()-1, s2.length()-1, s1, s2));
-        //System.out.println(longestDP(s1.length()-1, s2.length()-1, s1, s2, dp));
+        System.out.println(longestDP(s1.length()-1, s2.length()-1, s1, s2, dp));
 
         long endTime = System.nanoTime();
         long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds.

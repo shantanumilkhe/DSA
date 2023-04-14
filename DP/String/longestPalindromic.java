@@ -10,7 +10,7 @@ public class longestPalindromic {
         //this is a variation of longest common subsequence problem.
         //here we simply reverse the given string and pass it to the same function of
         //longest common subsequence problem.
-        String s1 = "gdfsfassd";
+        String s1 = "bbbab";
         StringBuilder ss = new StringBuilder(s1);
         ss.reverse();
         String s2= ss.toString();
