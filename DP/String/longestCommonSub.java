@@ -16,6 +16,8 @@ package DP.String;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 
 //        If not, then we are finding the answer for the given value for the first time,
 //        we will use the recursive relation as usual but before returning from the function,
