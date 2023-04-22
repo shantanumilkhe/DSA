@@ -14,13 +14,16 @@ public class kSorted {
             pq.add(arr[i]);
             if(pq.size()>k) ans.add(pq.poll());
         }
+        for(int i =0; i<k; i++){
+            ans.add(pq.poll());
+        }
         System.out.println(ans);
     }
 
     public static void main(String[] args) {
         long startTime = System.nanoTime();
-
-        // Write your code here
+        int[] arr = {6,5,3,2,8,10,9};
+        kSort(arr, 3);
 
         long endTime = System.nanoTime();
         long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds.
